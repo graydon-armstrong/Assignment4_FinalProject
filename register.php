@@ -27,7 +27,7 @@ File Description: The login page for users
 		<div class="row">
 			<div id="content">
 				<div class="large-12 columns">
-				<form method="post" action="save_admin.php">
+				<form method="post" action="validate_admin.php">
 					<div>
 						<label>Username</label></br>
 						<input name="username" maxlength="16" />

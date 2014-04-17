@@ -55,6 +55,8 @@ File Description: The home page for the website. Has the tag and mission stateme
 			<div id="content">
 				<div class="large-12 columns">
 					<?php
+						include('php/convert_priority.php');
+
 						echo '<h2>Customer Info</h2>';
 
 						echo '<table border="0">
@@ -66,7 +68,7 @@ File Description: The home page for the website. Has the tag and mission stateme
 
 						echo '<table border="0">
 							<tr><td>Incident Title</td><td>Incident Comment</td><td>Incident Priority</td><td>Incident Status</td><td>Timestamp</td></tr>
-							<tr><td>'. $incident_description .'</td><td>'. $incident_narrative .'</td><td>'. $incident_priority .'</td><td>'. $incident_status .'</td><td>'. $incident_timestamp .'</td></tr>
+							<tr><td>'. $incident_description .'</td><td>'. $incident_narrative .'</td><td>'. convert_priority($incident_priority) .'</td><td>'. $incident_status .'</td><td>'. $incident_timestamp .'</td></tr>
 							</table>';
 
 						echo '<h2>Incident Updates</h2>';

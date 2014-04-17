@@ -29,6 +29,7 @@ File Description: The home page for the website. Has the tag and mission stateme
 				<div class="large-12 columns">
 					<p>Incident Dashboard Page Stuff Temp</p>
 					<a href="add_incident.php">Create New Incident</a>
+					<a href="incident_dashboard.php?all=true">View Closed Incidents as Well</a>
 					<?php
 						include('php/convert_priority.php');
 						//create connection to database
@@ -40,8 +41,15 @@ File Description: The home page for the website. Has the tag and mission stateme
 							echo "Failed to connect to MySQL: " . mysqli_connect_error();
 						}
 
-						//select all the contacts from the mysql database
-						$sql = "SELECT * FROM incidents WHERE incident_status != 'closed' ORDER BY record_number";
+						if(!$_GET['all']=="true")
+						{
+							//select all the contacts from the mysql database
+							$sql = "SELECT * FROM incidents WHERE incident_status != 'closed' ORDER BY record_number";
+						}
+						else
+						{
+							$sql = "SELECT * FROM incidents ORDER BY record_number";
+						}
 						$result = mysqli_query($conn, $sql) or die('Error querying database.');
 
 						//echo the top of the table

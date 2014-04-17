@@ -57,14 +57,6 @@ File Description: The home page for the website. Has the tag and mission stateme
 							<label>Incident Comments</label></br>
 							<textarea  name="incident_narrative" rows="4" cols="50"></textarea>
 						</div>
-						<div>
-							<label>Incident Status</label></br>
-							<select name="incident_status">
-								<option value="open" selected>Open</option>
-								<option value="inprogress">In-Progress</option>
-								<option value="dispatched">Dispatched</option>
-							</select>
-						</div>
 						<input type="submit" value="Submit" />
 					</form>
 				</div>

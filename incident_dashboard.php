@@ -30,6 +30,7 @@ File Description: The home page for the website. Has the tag and mission stateme
 					<p>Incident Dashboard Page Stuff Temp</p>
 					<a href="add_incident.php">Create New Incident</a>
 					<?php
+						include('php/convert_priority.php');
 						//create connection to database
 						$conn = mysqli_connect("localhost", "graydonw_admin", "peasoup123", "graydonw_contacts");
 
@@ -50,7 +51,7 @@ File Description: The home page for the website. Has the tag and mission stateme
 						//go through all the results of the sql query and echo the names into the table. Also set the names for a modal
 					  	while ($row = mysqli_fetch_array($result))
 						{
-							echo '<tr><td><a href="incident_update.php?id='. $row['id'] .'">' . $row['record_number'] . '</a></td><td>' . $row['incident_description'] . '</td><td>' . $row['incident_status'] . '</td><td>' . $row['incident_priority'] . '</td><td>' . $row['customer_name'] . '</td><td>' . $row['timestamp'] . '</td></tr>';
+							echo '<tr><td><a href="incident_update.php?id='. $row['id'] .'">' . $row['record_number'] . '</a></td><td>' . $row['incident_description'] . '</td><td>' . $row['incident_status'] . '</td><td>' . convert_priority($row['incident_priority']) . '</td><td>' . $row['customer_name'] . '</td><td>' . $row['timestamp'] . '</td></tr>';
 					 	}
 
 						//finish the table and close the database connection

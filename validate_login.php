@@ -64,7 +64,7 @@ File Description: The validate page validates tjhe input from the form, and auth
 							$_SESSION['username'] = $username;
 							mysqli_close($conn);
 							echo '<script type="text/javascript">
-								window.location = "index.php"
+								window.location = "index.php?rand='.rand().'"
 								</script>';
 						} else {
 							//if they were not in the database show a message and a link to go back to the form

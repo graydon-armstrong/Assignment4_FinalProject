@@ -32,10 +32,10 @@ File Description: This is the header that is included on everypage. It includes 
 						
 			<section class="top-bar-section" id="nav_links">
 			<ul class="right">
-				<li class="active"><a href="index.php" <?php if(curPageName() =="index.php") {echo('id="current_page"');}?>>Home</a></li>
-				<li class="active"><a href="register.php" <?php if(curPageName() =="register.php") {echo('id="current_page"');}?>>Register</a></li>
-				<li class="active"><a href="profile.php" <?php if(curPageName() =="profile.php") {echo('id="current_page"');}?>>Profile</a></li>
-				<li class="active"><a href="incident_dashboard.php" <?php if(curPageName() =="incident_dashboard.php") {echo('id="current_page"');}?>>Incident Dashboard</a></li>
+				<li class="active"><a href="index.php?rand=<?php echo rand(); ?>" <?php if(curPageName() =="index.php") {echo('id="current_page"');}?>>Home</a></li>
+				<li class="active"><a href="register.php?rand=<?php echo rand(); ?>" <?php if(curPageName() =="register.php") {echo('id="current_page"');}?>>Register</a></li>
+				<li class="active"><a href="profile.php?rand=<?php echo rand(); ?>" <?php if(curPageName() =="profile.php") {echo('id="current_page"');}?>>Profile</a></li>
+				<li class="active"><a href="incident_dashboard.php?rand=<?php echo rand(); ?>" <?php if(curPageName() =="incident_dashboard.php") {echo('id="current_page"');}?>>Incident Dashboard</a></li>
 			</ul>
 			</section>
 		</nav>

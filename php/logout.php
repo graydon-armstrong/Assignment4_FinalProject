@@ -8,5 +8,5 @@
 	}
 
 	// Redirect to the login page
-	header('Location: /assignment4/index.php');
+	header('Location: /assignment4/index.php?rand='.rand());
 ?>

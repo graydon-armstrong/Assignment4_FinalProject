@@ -61,6 +61,7 @@ File Description: The validate page validates tjhe input from the form, and auth
 						if ($count == 1) {
 							$row = mysqli_fetch_array($result);
 							$_SESSION['user_id'] = $row['id'];
+							$_SESSION['username'] = $username;
 							mysqli_close($conn);
 							echo '<script type="text/javascript">
 								window.location = "index.php"

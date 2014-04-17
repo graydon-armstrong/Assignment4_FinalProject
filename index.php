@@ -27,9 +27,7 @@ File Description: The home page for the website. Has the tag and mission stateme
 		<div class="row">
 			<div id="content">
 				<div class="large-12 columns">
-					<p>Welcome to my portfolio site.</p>
-					<p>Graydon Armstrong, Web Design Extraordinaire.</p>
-					<p>I am a Programming Analyst Student who aspires to run my own business. I want to do web design and programming for clients that is regarded as professional and of high quality. I enjoy programming and the challenges that it gives me from day to day.</p>
+					<p>Welcome to my incident management web application.</p>
 				</div>
 			</div>
 		</div>

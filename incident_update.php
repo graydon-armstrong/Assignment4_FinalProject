@@ -42,6 +42,8 @@ File Description: The home page for the website. Has the tag and mission stateme
 				$customer_email = $row['customer_email'];
 				$incident_timestamp = $row['timestamp'];
 			}
+
+			mysqli_close($conn);
 		?>
 		
 		<div class="row">
@@ -64,19 +66,51 @@ File Description: The home page for the website. Has the tag and mission stateme
 							<tr><td>'. $customer_name .'</td><td>'. $customer_email .'</td></tr>
 							</table>';
 
-						echo '<h2>Incident Info</h2>';
+						echo '<h2>Incident Info</h2>';						
 
 						echo '<table border="0">
 							<tr><td>Incident Title</td><td>Incident Comment</td><td>Incident Priority</td><td>Incident Status</td><td>Timestamp</td></tr>
 							<tr><td>'. $incident_description .'</td><td>'. $incident_narrative .'</td><td>'. convert_priority($incident_priority) .'</td><td>'. $incident_status .'</td><td>'. $incident_timestamp .'</td></tr>
 							</table>';
 
-						echo '<h2>Incident Updates</h2>';
+						//create connection to database
+						$conn = mysqli_connect("localhost", "graydonw_admin", "peasoup123", "graydonw_contacts");
+
+						//check for connection errors
+						if (mysqli_connect_errno())
+						{
+							echo "Failed to connect to MySQL: " . mysqli_connect_error();
+						}
+
+						//select all the contacts from the mysql database
+						$sql = "SELECT * FROM incident_updates WHERE incident_id = '". $id ."' ORDER BY id";
+						$result = mysqli_query($conn, $sql) or die('Error querying database.');
+						$count = mysqli_num_rows($result);
+
+						if($count > 0)
+						{
+							echo '<h2>Incident Updates</h2>';
+							//echo the top of the table
+							echo 	'<table border="0">
+									<tr><td>Update Comment</td><td>Timestamp</td></tr>';
+
+							//go through all the results of the sql query and echo the names into the table. Also set the names for a modal
+						  	while ($row = mysqli_fetch_array($result))
+							{
+								echo '<tr><td>' . $row['incident_narrative'] . '</td><td>' . $row['timestamp'] . '</td></tr>';
+						 	}
+
+							//finish the table and close the database connection
+							echo '</table>';
+						}
+
+						//close the database connection
+						mysqli_close($conn);
 
 						echo '<h2>Update Incident Progress</h2>';
 					?>
 
-					<form method="post" action="validate_incident_update?id=<?php echo $id; ?>.php">
+					<form method="post" action="validate_incident_update.php?id=<?php echo $id; ?>">
 						<div>
 							</br>
 							<label>Incident Comments</label></br>
@@ -93,38 +127,6 @@ File Description: The home page for the website. Has the tag and mission stateme
 						</div>
 						<input type="submit" value="Submit" />
 					</form>
-
-					<?php
-
-						/*//create connection to database
-						$conn = mysqli_connect("localhost", "graydonw_admin", "peasoup123", "graydonw_contacts");
-
-						//check for connection errors
-						if (mysqli_connect_errno())
-						{
-							echo "Failed to connect to MySQL: " . mysqli_connect_error();
-						}
-
-						//select all the contacts from the mysql database
-						$sql = "SELECT * FROM incidents WHERE incident_status != 'closed' ORDER BY record_number";
-						$result = mysqli_query($conn, $sql) or die('Error querying database.');
-
-						//echo the top of the table
-						echo 	'<table border="0">
-								<tr><td>Record Number</td><td>Incident Title</td><td>Incident Status</td><td>Incident Priority</td><td>Customer Name</td><td>Timestamp</td></tr>';
-
-						//go through all the results of the sql query and echo the names into the table. Also set the names for a modal
-					  	while ($row = mysqli_fetch_array($result))
-						{
-							echo '<tr><td><a href="incident_update.php?id='. $row['id'] .'">' . $row['record_number'] . '</a></td><td>' . $row['incident_description'] . '</td><td>' . $row['incident_status'] . '</td><td>' . $row['incident_priority'] . '</td><td>' . $row['customer_name'] . '</td><td>' . $row['timestamp'] . '</td></tr>';
-					 	}
-
-						//finish the table and close the database connection
-						echo '</table>';
-
-						//close the database connection
-						mysqli_close($conn);*/
-					?>
 				</div>
 			</div>
 		</div>

@@ -40,7 +40,7 @@ File Description: The home page for the website. Has the tag and mission stateme
 						}
 
 						//select all the contacts from the mysql database
-						$sql = "SELECT * FROM incidents ORDER BY record_number";
+						$sql = "SELECT * FROM incidents WHERE incident_status != 'closed' ORDER BY record_number";
 						$result = mysqli_query($conn, $sql) or die('Error querying database.');
 
 						//echo the top of the table

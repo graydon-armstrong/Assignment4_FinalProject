@@ -33,23 +33,27 @@ File Description: The home page for the website. Has the tag and mission stateme
 							<input name="incident_description" maxlength="200" />
 						</div>
 						<div>
+							</br>
 							<label>Incident Priority</label></br>
 							<select name="incident_priority">
 								<option value="1" selected>1 - Low Priority</option>
-								<option value="2">1 - Medium Priority</option>
-								<option value="3">1 - High Priority</option>
-								<option value="4">1 - Very High Priority</option>
+								<option value="2">2 - Medium Priority</option>
+								<option value="3">3 - High Priority</option>
+								<option value="4">4 - Very High Priority</option>
 							</select>
 						</div>
 						<div>
+							</br>
 							<label>Customer Name</label></br>
 							<input name="customer_name" maxlength="50" />
 						</div>
 						<div>
+							</br>
 							<label>Customer Email</label></br>
 							<input name="customer_email" maxlength="100" />
 						</div>
 						<div>
+							</br>
 							<label>Incident Comments</label></br>
 							<textarea  name="incident_narrative" rows="4" cols="50"></textarea>
 						</div>

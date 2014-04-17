@@ -25,7 +25,7 @@ File Description: This is the header that is included on everypage. It includes 
 		<nav class="top-bar" data-topbar>
 			<ul class="title-area">
 				<li class="name">
-					<h1><a href="index.php<?php if (isset($_SESSION['version'])) {echo("?version=full");}?>">Graydons Web Design</a></h1>
+					<h1><a href="index.php?rand=<?php echo rand(); ?>">Graydons Web Design</a></h1>
 				</li>
 				<li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
 			</ul>

@@ -60,9 +60,7 @@ File Description: The validate page validates tjhe input from the form, and auth
 						//if the count is one log the user in by storing their user id in a session variable and redirect to the business contacts page
 						if ($count == 1) {
 							$row = mysqli_fetch_array($result);
-							echo $row['id'];
 							$_SESSION['user_id'] = $row['id'];
-							echo $_SESSION['user_id'];
 							mysqli_close($conn);
 							echo '<script type="text/javascript">
 								window.location = "index.php"

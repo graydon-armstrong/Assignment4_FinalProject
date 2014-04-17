@@ -7,4 +7,8 @@
 		header("Location: .\login.php");
 		//echo 'You must login to see this page. Click <a href="login.php">Login</a> to enter your credentials.';
 	}
+	else
+	{
+		$loggedin = true;
+	}
 ?>

@@ -33,6 +33,7 @@ File Description: This is the header that is included on everypage. It includes 
 			<section class="top-bar-section" id="nav_links">
 			<ul class="right">
 				<li class="active"><a href="index.php" <?php if(curPageName() =="index.php") {echo('id="current_page"');}?>>Home</a></li>
+				<li class="active"><a href="register.php" <?php if(curPageName() =="register.php") {echo('id="current_page"');}?>>Register</a></li>
 			</ul>
 			</section>
 		</nav>

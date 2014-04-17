@@ -1,0 +1,13 @@
+CREATE TABLE incidents
+(
+	id int NOT NULL AUTO_INCREMENT,
+	record_number varchar(20),
+	incident_description varchar(200),
+	incident_priority int(1),
+	customer_name varchar(50),
+	customer_email varchar(100),
+	incident_narrative text,
+	incident_status varchar(20),
+	timestamp datetime,	
+	primary key (id)
+)

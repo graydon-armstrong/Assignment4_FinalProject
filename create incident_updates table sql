@@ -1,0 +1,9 @@
+CREATE TABLE incident_updates
+(
+	id int NOT NULL AUTO_INCREMENT,
+	incident_id int,
+	incident_narrative text,
+	timestamp datetime,	
+	primary key (id),
+	foreign key (incident_id) references incidents (id)
+)

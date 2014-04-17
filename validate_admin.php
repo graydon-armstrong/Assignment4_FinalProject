@@ -1,8 +1,9 @@
 <!--
-Filename: index.php
+Filename: validate_admin.php
 Authors name: Graydon Armstrong
 Website name: Graydon Web Design
-File Description: The home page for the website. Has the tag and mission statements, a more work button, and a slider
+File Description: Validate the info put into the registration page, and print any error messages if there were things missing. Makes sure the username and email arent already in use.
+				  Then sends up the new user to the database
 -->
 <?php include('php/check_login.php'); ?>
 <!DOCTYPE html>

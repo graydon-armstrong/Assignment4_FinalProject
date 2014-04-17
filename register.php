@@ -2,7 +2,7 @@
 Filename: register.php
 Authors name: Graydon Armstrong
 Website name: Graydon Web Design
-File Description: The login page for users
+File Description: A page to let you register as a new user for the site
 -->
 <?php include('php/check_login.php'); ?>
 <!DOCTYPE html>

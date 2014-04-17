@@ -1,3 +1,10 @@
+<!--
+Filename: check_login_redirect.php
+Authors name: Graydon Armstrong
+Website name: Graydon Web Design
+File Description: Redirects you to the login page if you arent logged in
+-->
+
 <?php
 	//start a session
 	session_start();

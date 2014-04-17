@@ -1,8 +1,9 @@
 <!--
-Filename: index.php
+Filename: incident_dashboard.php
 Authors name: Graydon Armstrong
 Website name: Graydon Web Design
-File Description: The home page for the website. Has the tag and mission statements, a more work button, and a slider
+File Description: The page that shows all the incidents to the logged in user. Their is a button to create a new incident, and a button to show closed incidents as well.
+				  You can click on the record number of an incident to expand it and see the comment upadets and to update it more.
 -->
 <?php include('php/check_login_redirect.php'); ?>
 <!DOCTYPE html>

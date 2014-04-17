@@ -1,8 +1,8 @@
 <!--
-Filename: index.php
+Filename: profile.php
 Authors name: Graydon Armstrong
 Website name: Graydon Web Design
-File Description: The home page for the website. Has the tag and mission statements, a more work button, and a slider
+File Description: When logged in a page that shows the username and email for the user. Also lets you change your password
 -->
 <?php include('php/check_login_redirect.php'); ?>
 <!DOCTYPE html>

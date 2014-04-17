@@ -1,8 +1,8 @@
 <!--
-Filename: index.php
+Filename: validate_password_update.php
 Authors name: Graydon Armstrong
 Website name: Graydon Web Design
-File Description: The home page for the website. Has the tag and mission statements, a more work button, and a slider
+File Description: Validate the password update against the database and give any error messages when needed.
 -->
 <?php include('php/check_login_redirect.php'); ?>
 <!DOCTYPE html>

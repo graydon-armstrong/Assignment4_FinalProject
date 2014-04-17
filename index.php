@@ -2,7 +2,7 @@
 Filename: index.php
 Authors name: Graydon Armstrong
 Website name: Graydon Web Design
-File Description: The home page for the website. Has the tag and mission statements, a more work button, and a slider
+File Description: The home page for the website. Just is the landing page for the site
 -->
 <?php include('php/check_login.php'); ?>
 <!DOCTYPE html>

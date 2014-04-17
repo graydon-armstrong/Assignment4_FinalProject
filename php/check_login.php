@@ -1,3 +1,10 @@
+<!--
+Filename: check_login.php
+Authors name: Graydon Armstrong
+Website name: Graydon Web Design
+File Description: Sets a logged in variable if you are logged in
+-->
+
 <?php
 	//start a session
 	session_start();

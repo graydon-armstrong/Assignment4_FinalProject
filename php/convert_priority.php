@@ -1,3 +1,10 @@
+<!--
+Filename: convert_priority.php
+Authors name: Graydon Armstrong
+Website name: Graydon Web Design
+File Description: Converts the priority number to a user freindly string
+-->
+
 <?php
 
 	function convert_priority($inPriority) {

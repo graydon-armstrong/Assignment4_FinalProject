@@ -1,8 +1,8 @@
 <!--
-Filename: index.php
+Filename: incident_update.php
 Authors name: Graydon Armstrong
 Website name: Graydon Web Design
-File Description: The home page for the website. Has the tag and mission statements, a more work button, and a slider
+File Description: A page for showing the details of an incident. It shows the incident information and any updates made to it. If the incident isnt closed you can updates it with a new comment and status.
 -->
 <?php include('php/check_login_redirect.php'); ?>
 <!DOCTYPE html>

@@ -1,8 +1,8 @@
 <!--
-Filename: validate.php
+Filename: validate_login.php
 Authors name: Graydon Armstrong
 Website name: Graydon Web Design
-File Description: The validate page validates tjhe input from the form, and authenticates it against a mysql database
+File Description: The validate page validates the input from the form, and authenticates it against a mysql database
 -->
 <?php session_start(); ?>
 <!DOCTYPE html>

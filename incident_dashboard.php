@@ -27,9 +27,8 @@ File Description: The home page for the website. Has the tag and mission stateme
 		<div class="row">
 			<div id="content">
 				<div class="large-12 columns">
-					<p>Incident Dashboard Page Stuff Temp</p>
-					<a href="add_incident.php">Create New Incident</a>
-					<a href="incident_dashboard.php?all=true">View Closed Incidents as Well</a>
+					<a href="add_incident.php" class="button">Create New Incident</a>
+					<a href="incident_dashboard.php?all=true" class="button">View Closed Incidents as Well</a>
 					<?php
 						include('php/convert_priority.php');
 						//create connection to database

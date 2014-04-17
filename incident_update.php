@@ -107,26 +107,28 @@ File Description: The home page for the website. Has the tag and mission stateme
 						//close the database connection
 						mysqli_close($conn);
 
-						echo '<h2>Update Incident Progress</h2>';
+						if($incident_status != 'closed')
+						{
+							echo '<h2>Update Incident Progress</h2>';
+							echo'<form method="post" action="validate_incident_update.php?id='. $id .'">
+									<div>
+										</br>
+										<label>Incident Comments</label></br>
+										<textarea  name="incident_narrative" rows="4" cols="50"></textarea>
+									</div>
+									<div>
+										<label>Incident Status</label></br>
+										<select name="incident_status">
+											<option value="open" selected>Open</option>
+											<option value="inprogress">In-Progress</option>
+											<option value="dispatched">Dispatched</option>
+											<option value="closed">Closed</option>
+										</select>
+									</div>
+									<input type="submit" value="Submit" />
+								</form>';
+						}
 					?>
-
-					<form method="post" action="validate_incident_update.php?id=<?php echo $id; ?>">
-						<div>
-							</br>
-							<label>Incident Comments</label></br>
-							<textarea  name="incident_narrative" rows="4" cols="50"></textarea>
-						</div>
-						<div>
-							<label>Incident Status</label></br>
-							<select name="incident_status">
-								<option value="open" selected>Open</option>
-								<option value="inprogress">In-Progress</option>
-								<option value="dispatched">Dispatched</option>
-								<option value="closed">Closed</option>
-							</select>
-						</div>
-						<input type="submit" value="Submit" />
-					</form>
 				</div>
 			</div>
 		</div>

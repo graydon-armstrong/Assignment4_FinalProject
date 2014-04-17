@@ -103,7 +103,9 @@ File Description: The home page for the website. Has the tag and mission stateme
 
 							mysqli_query($conn, $sql);
 							mysqli_close($conn);
-							header("Location: index.php");
+							echo 'Registration Successful';
+							echo '</br>';
+							echo '<a href="index.php">Home Page</a>';
 						}
 						else {
 							echo 'Click <a href="javascript:history.go(-1)">HERE</a> to go back and adjust your entry.';
